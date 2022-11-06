@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
-import { json } from 'react-router-dom';
+import {React, useState } from 'react'
+// import Calendar  from "react-calendar"
+// import "./components/Calendar"
+// import 'react-calendar/dist/Calendar.css';
+// // import { json } from 'react-router-dom';
 
-export function student() = () => {
+const Student =() => {
   const [Title, setTitle] = useState('');
   const [Organizer, setOrganizer] = useState('');
   const [Name, setName] = useState('');
@@ -35,7 +38,7 @@ export function student() = () => {
       })
     })
   }
-  return (
+  return(
     <body class="h-screen bg-gradient-to-b from-blue-500 to-blue-200">
     <div className='flex flex-col md:flex-row absolute text-center w-full content-between bg-gray-300 justify-evenly items-center rounded-3xl border-black top-[25%]'>
 
@@ -97,4 +100,4 @@ export function student() = () => {
     </body>
   )
 }
-export default Forms
+export default Student;

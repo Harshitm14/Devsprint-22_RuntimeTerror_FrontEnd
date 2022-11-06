@@ -1,11 +1,11 @@
-//import { Calendar } from "react-calendar"
-import "./components/Calender"
+import { Calendar } from "react-calendar"
+import "./components/Calendar"
 import 'react-calendar/dist/Calendar.css';
 import Navbar from "./components/Navbar";
 import Forms from "./components/Forms";
 import { Route,Routes } from "react-router-dom"
-import {teacher} from "./components/teacher";
-import {student} from "./components/student";
+import Student from "./components/Student";
+import Teacher from "./components/Teacher";
 
 
 export default function App(){
@@ -14,8 +14,8 @@ export default function App(){
   <Routes>
     
     <Route exact path="/" element={<Forms />} />
-    <Route path ="/teach" element={<teacher />} />  
-    <Route path ="/stud" element={<student />} /> 
+    <Route path ="/teach" element={<Teacher />} />  
+    <Route path ="/stud" element={<Student/>} /> 
     </Routes>
     </>
   )

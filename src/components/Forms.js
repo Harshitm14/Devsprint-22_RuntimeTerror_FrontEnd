@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { json } from 'react-router-dom';
 
 const Forms = () => {
   const [FirstName, setFirstName] = useState('');
@@ -28,7 +27,7 @@ const Forms = () => {
       })
     })
   }
-  return (
+  return(
     <body class="h-screen bg-gradient-to-b from-blue-500 to-blue-200">
     <div className='flex flex-col md:flex-row absolute text-center w-full content-between bg-gray-300 justify-evenly items-center rounded-3xl border-black top-[25%]'>
 
