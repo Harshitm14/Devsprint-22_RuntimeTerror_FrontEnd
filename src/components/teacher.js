@@ -14,12 +14,15 @@ const Teacher =() => {
   const [EndDate, setEndDate] = useState('');
   const [StartTime, setStartTime] = useState('');
   const [EndTime, setEndTime] = useState('');
+  const [Room, setRoom] = useState('');
+  const [Remarks, setRemarks] = useState('');
+  const [Status, setStatus] = useState('');
   const submit=async e=>{
     e.preventDefault()
     await fetch('',{
-      method:'POST',
+      method:'GET',
       headers: {'Content-Type':'application/json'},
-      body: JSON.stringfy ({
+      body: JSON.stringify ({
         Title,
         Organizer,
         Name,
@@ -31,7 +34,11 @@ const Teacher =() => {
         StartDate,
         EndDate,
         StartTime,
-        EndTime
+        EndTime,
+        Room,
+        Remarks,
+        Status
+        
       })
     })
   }
@@ -40,10 +47,11 @@ const Teacher =() => {
     <div className='flex flex-col md:flex-row absolute text-center w-full content-between bg-gray-300 justify-evenly items-center rounded-3xl border-black top-[25%]'>
 
       <div className='form frm1'>
-        <p className='label lbl1'>Apply For </p>
+        <p className='label lbl1'>Approval Portal</p>
         
         <form onSubmit={submit} className='flex flex-col space-y-2 mt-4 md:mt-0 w-fit mx-auto'>
           <div className='flex space-x-2'>
+            {Name}
           <input className='contactInput' placeholder='Title' required onChange={e=>{
             setTitle(e.target.value);
           }}/>

@@ -19,7 +19,7 @@ const Student =() => {
   const [EndTime, setEndTime] = useState('');
   const submit=async e=>{
     e.preventDefault()
-    await fetch('',{
+    const res = await fetch('https://Devsprint22.annnesha.repl.co/kevents/register',{
       method:'POST',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringfy ({
@@ -37,6 +37,20 @@ const Student =() => {
         EndTime
       })
     })
+    const data = await res.json();
+    console.log(data);
+    // console.log(Title,
+    //   Organizer,
+    //   Name,
+    //   Roll,
+    //   Branch,
+    //   School,
+    //   Desc,
+    //   Venue,
+    //   StartDate,
+    //   EndDate,
+    //   StartTime,
+    //   EndTime )
   }
   return(
     <body class="h-screen bg-gradient-to-b from-blue-500 to-blue-200">

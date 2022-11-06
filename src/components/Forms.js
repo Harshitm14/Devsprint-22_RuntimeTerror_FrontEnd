@@ -10,13 +10,13 @@ const Forms = () => {
   const [School, setSchool] = useState('');
   const [Designation, setDesignation] = useState('');
   const [LoginEmail, setLoginEmail] = useState('');
-  console.log(Role)
   const submit=async e=>{
     e.preventDefault()
-    await fetch('',{
+    console.log("hello")
+    const res = await fetch('https://Devsprint22.annnesha.repl.co/kevents/register',{
       method:'POST',
       headers: {'Content-Type':'application/json'},
-      body: JSON.stringfy ({
+      body: JSON.stringify ({
         FirstName,
         LastName,
         Email,
@@ -26,6 +26,8 @@ const Forms = () => {
         Designation
       })
     })
+    const data = await res.json();
+    console.log(data);
   }
   return(
     <body class="h-screen bg-gradient-to-b from-blue-500 to-blue-200">
