@@ -89,6 +89,15 @@ const Teacher =() => {
            <input className='contactInput' type="text" placeholder='EndTime' required onChange={e=>{
             setEndTime(e.target.value);
           }}/>
+           <input className='contactInput' type="text" placeholder='Room' required onChange={e=>{
+            setRoom(e.target.value);
+          }}/>
+           <input className='contactInput' type="text" placeholder='Remarks' required onChange={e=>{
+            setRemarks(e.target.value);
+          }}/>
+           <input className='contactInput' type="text" placeholder='Status : Approved or Rejected' required onChange={e=>{
+            setStatus(e.target.value);
+          }}/>
           
           
           <button type='submit' className="bg-gray-200 hover:bg-rose-300 text-black font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-full">

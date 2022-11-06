@@ -29,6 +29,28 @@ const Forms = () => {
     const data = await res.json();
     console.log(data);
   }
+
+
+  const Forms = () => {
+    
+    const [Email, setEmail] = useState('');
+    const [Password, setPassword] = useState('');
+    const [LoginEmail, setLoginEmail] = useState('');
+    const submit=async e=>{
+      e.preventDefault()
+      console.log("hello")
+      const res = await fetch('https://Devsprint22.annnesha.repl.co/kevents/register',{
+        method:'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify ({
+          Email,
+          Password
+        })
+      })
+      const data = await res.json();
+      console.log(data);
+    }
+  }
   return(
     <body class="h-screen bg-gradient-to-b from-blue-500 to-blue-200">
     <div className='flex flex-col md:flex-row absolute text-center w-full content-between bg-gray-300 justify-evenly items-center rounded-3xl border-black top-[25%]'>
@@ -69,7 +91,6 @@ const Forms = () => {
   Submit
 </button>
 
-            
         
         </form>
       </div>
